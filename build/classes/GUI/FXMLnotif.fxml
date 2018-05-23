@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLnotifController">
+   <children>
+      <Label layoutX="443.0" layoutY="18.0" text="Evenement " />
+      <JFXButton fx:id="idbut" layoutX="521.0" layoutY="14.0" onAction="#NotAction" textFill="RED" />
+   </children>
+</AnchorPane>

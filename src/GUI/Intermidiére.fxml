@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #161f28;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="GUI.IntermidiéreController">
+   <children>
+      <JFXRadioButton fx:id="cli" layoutX="148.0" layoutY="99.0" onAction="#clickClient" text="Client" textFill="#d6ee00">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="ent" layoutX="148.0" layoutY="183.0" onAction="#clickCompany" text="Entreprise" textFill="#ede700">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>

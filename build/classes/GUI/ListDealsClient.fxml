@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1100.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListDealsClientController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="s" layoutY="10.0" prefHeight="808.0" prefWidth="1680.0">
+               <children>
+                  <TableView fx:id="tabp" layoutX="223.0" layoutY="57.0" onMouseClicked="#showDetailDeal" prefHeight="749.0" prefWidth="1444.0">
+                     <columns>
+                        <TableColumn fx:id="image" editable="false" minWidth="8.0" prefWidth="167.0" text="Images" />
+                        <TableColumn fx:id="name" editable="false" minWidth="6.0" prefWidth="112.0" text="titre" />
+                        <TableColumn fx:id="description" editable="false" prefWidth="240.0" text="Description" />
+                        <TableColumn fx:id="lieux" editable="false" minWidth="0.0" prefWidth="184.0" text="Adresse" />
+                        <TableColumn fx:id="price" minWidth="1.000030517578125" prefWidth="137.0" text="Prix" />
+                        <TableColumn fx:id="dateDeb" minWidth="0.0" prefWidth="151.0" text="Date Debut" />
+                        <TableColumn fx:id="dateFin" prefWidth="189.0" text="Date Fin" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="7.0" layoutY="12.0" prefHeight="61.0" prefWidth="604.0" />
+                  <Rectangle fx:id="pane" arcHeight="5.0" arcWidth="5.0" fill="#117a65" height="49.0" layoutX="10.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1660.0" />
+                  <Label layoutX="-1.0" layoutY="-24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="1224.0" text="Mes Deals" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="79.0" layoutY="82.0" text="prix" />
+                  <JFXSlider fx:id="slider" layoutX="18.0" layoutY="109.0" max="5000.0" onMouseReleased="#recherche" prefHeight="14.0" prefWidth="192.0" />
+                  <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#recherche" prefHeight="25.0" prefWidth="215.0" text="Rechercher" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

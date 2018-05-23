@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1008.0" style="-fx-background-color: #0a0f14;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLComtCompanyController">
+   <children>
+      <Pane layoutX="249.0" layoutY="248.0" prefHeight="413.0" prefWidth="761.0" style="-fx-background-color: #e4e4e4;" />
+      <ImageView fitHeight="174.0" fitWidth="221.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/LOGO_Noir.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/profile.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1.0" layoutY="287.0" mnemonicParsing="false" onAction="#goToAcceil" prefHeight="44.0" prefWidth="248.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Acceuil" textFill="#49afd3">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutY="350.0" mnemonicParsing="false" onAction="#goTolisiAvis" prefHeight="44.0" prefWidth="248.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Lister Les avis" textFill="#49afd3">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="1.0" layoutY="411.0" mnemonicParsing="false" onAction="#goToEvent" prefHeight="44.0" prefWidth="248.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Gestion Evenements" textFill="#49afd3">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutY="470.0" mnemonicParsing="false" onAction="#goToAds" prefHeight="44.0" prefWidth="248.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Gestion Publicités" textFill="#49afd3">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <JFXButton layoutX="908.0" layoutY="212.0" onAction="#goUpdt" prefHeight="0.0" prefWidth="67.0" text="Edit Profil" textFill="#49afd3" />
+      <Button layoutX="836.0" layoutY="52.0" mnemonicParsing="false" onAction="#deconect" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #161f28;" text="Déconnecter" textFill="#49afd3">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="pre" layoutX="248.0" layoutY="88.0" prefHeight="25.0" prefWidth="150.0" text="Nom" textFill="#98aaae">
+         <font>
+            <Font name="Arial Unicode MS" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="mail" layoutX="248.0" layoutY="137.0" prefHeight="25.0" prefWidth="68.0" text="E-mail" textFill="#49afd3">
+         <font>
+            <Font name="Arial Unicode MS" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tel" layoutX="249.0" layoutY="187.0" prefHeight="25.0" prefWidth="68.0" text="Adress" textFill="#49afd3">
+         <font>
+            <Font name="Arial Unicode MS" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tel1" layoutX="362.0" layoutY="137.0" prefHeight="17.0" prefWidth="49.0" text="Note" textFill="#49afd3">
+         <font>
+            <Font name="Arial Unicode MS" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tel2" layoutX="362.0" layoutY="187.0" prefHeight="17.0" prefWidth="49.0" text="Note" textFill="#49afd3">
+         <font>
+            <Font name="Arial Unicode MS" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
