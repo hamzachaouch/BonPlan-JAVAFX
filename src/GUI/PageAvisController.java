@@ -9,6 +9,7 @@ import static GUI.ListCompanyClientController.rClient;
 import Services.EventService;
 import Services.ReviewServices;
 import entite.Review;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -17,7 +18,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -25,6 +30,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -79,6 +85,16 @@ public class PageAvisController implements Initializable {
 
     @FXML
     private void supprimer(ActionEvent event) {
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+              Parent parentInscit = FXMLLoader.load(getClass().getResource("ListCompanyClient.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
     }
     
 }

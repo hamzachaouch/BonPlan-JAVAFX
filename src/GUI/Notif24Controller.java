@@ -132,6 +132,17 @@ public class Notif24Controller implements Initializable {
          date.setCellValueFactory(new PropertyValueFactory<>("date"));
     }
 
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+             Parent parentInscit = FXMLLoader.load(getClass().getResource("Acceuil.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+    
+    }
+
 
     
 }

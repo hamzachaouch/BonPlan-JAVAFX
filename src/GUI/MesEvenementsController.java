@@ -7,6 +7,7 @@ package GUI;
 
 //import static GUI.EventListController.PBevent;
 import Services.EventService;
+import com.jfoenix.controls.JFXButton;
 import entite.Event;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -26,6 +27,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.SortEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -53,10 +55,13 @@ public class MesEvenementsController implements Initializable {
     private TableColumn<Event, String> title;
     @FXML
     private TableColumn<Event, String> description;
+    @FXML
     private TableColumn<Event,String> type;
     @FXML
     private TableColumn<Event,String> city;
+    @FXML
     private TableColumn<Event,Float> price;
+    @FXML
     private TableColumn<Event, Date> date;
     @FXML
     private Rectangle pane;
@@ -66,8 +71,6 @@ public class MesEvenementsController implements Initializable {
     private Button Ajouter;
     @FXML
     private Button Supprimer;
-    @FXML
-    private Button Modifier;
     
 
     /**
@@ -144,13 +147,35 @@ public class MesEvenementsController implements Initializable {
         stageInscit .show();
     }
 
+ 
+
+    private void retour(ActionEvent event) throws IOException {
+        
+      Parent parentInscit = FXMLLoader.load(getClass().getResource("Etablissement.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+
+  
+
+  
+
+    }  
+
     @FXML
-    private void Modifier(ActionEvent event) {
+    private void back(ActionEvent event) throws IOException {
+            Parent parentInscit = FXMLLoader.load(getClass().getResource("AdministrateurC.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
     }
 
-  
+
+
 
   
-
-    
 }

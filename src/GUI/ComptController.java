@@ -53,27 +53,18 @@ public class ComptController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         pre.setText(StaticValues.client.getPrenom());
+      
          EventService ev = new EventService();
         int nb = ev.notification24();
         String nnb = Integer.toString(nb);
         idbut.setText(nnb);
        // lblUser.setText(StaticValues.client.getUsername());
         mail.setText(StaticValues.client.getEmail());
-        String tell = Integer.toString(StaticValues.client.getTelphone());
-        tel.setText(tell);
-        if(StaticValues.client.getPhotoprofilpath()!=null){
-          BufferedImage bf = null;
-        try {
-            bf = ImageIO.read(StaticValues.client.getPhotoprofilpath());
-        } catch (IOException ex) {
-            Logger.getLogger(ComptController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if(bf!=null){
-          Image im = SwingFXUtils.toFXImage(bf, null);
-         imm.setImage(im);
-        }
-        }
+        
+   
+      
+     
+        
     }    
 
     @FXML

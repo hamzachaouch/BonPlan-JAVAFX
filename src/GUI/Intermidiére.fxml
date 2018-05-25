@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #161f28;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="GUI.IntermidiéreController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #161f28;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.IntermidiéreController">
    <children>
-      <JFXRadioButton fx:id="cli" layoutX="148.0" layoutY="99.0" onAction="#clickClient" text="Client" textFill="#d6ee00">
+      <JFXRadioButton fx:id="cli" layoutX="21.0" layoutY="262.0" onAction="#clickClient" prefHeight="73.0" prefWidth="276.0" text="Client" textFill="WHITE">
          <font>
             <Font size="50.0" />
          </font>
       </JFXRadioButton>
-      <JFXRadioButton fx:id="ent" layoutX="148.0" layoutY="183.0" onAction="#clickCompany" text="Entreprise" textFill="#ede700">
+      <JFXRadioButton fx:id="ent" layoutX="309.0" layoutY="258.0" onAction="#clickCompany" text="Entreprise" textFill="WHITE">
          <font>
             <Font size="50.0" />
          </font>
       </JFXRadioButton>
+      <Label fx:id="keep" layoutX="210.0" layoutY="27.0" prefHeight="35.0" prefWidth="216.0" text="Vous êtes  ?" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="302.0" layoutY="61.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="2.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="72.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Client-2-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="385.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/en.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#retour" text="retour" textFill="WHITE" />
    </children>
 </AnchorPane>

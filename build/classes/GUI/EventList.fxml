@@ -8,10 +8,10 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EventListController">
    <children>
@@ -29,28 +29,31 @@
                </columns>
             </TableView>
             <Label layoutX="7.0" layoutY="12.0" prefHeight="61.0" prefWidth="604.0" />
-            <Rectangle fx:id="pane" arcHeight="5.0" arcWidth="5.0" fill="#117a65" height="61.0" layoutX="8.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1688.0" />
-            <Label layoutX="524.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="1171.0" text="DÉCOUVRIRE LES ÉVENEMENTS" textFill="WHITE">
-               <font>
-                  <Font name="Berlin Sans FB" size="25.0" />
-               </font>
-            </Label>
-            <Pane fx:id="lieu" layoutX="7.0" layoutY="72.0" prefHeight="629.0" prefWidth="187.0">
+            <Rectangle fx:id="pane" arcHeight="5.0" arcWidth="5.0" height="61.0" layoutX="4.0" layoutY="12.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1688.0" />
+            <Pane fx:id="lieu" layoutX="-3.0" layoutY="73.0" prefHeight="529.0" prefWidth="197.0">
                <children>
-                  <JFXButton fx:id="event" layoutX="-2.0" layoutY="16.0" onAction="#ListEvent" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #117a65;" text="Evenement" textFill="WHITE" />
-                  <JFXButton fx:id="soire" layoutX="2.0" layoutY="64.0" onAction="#ListSoire" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: #117a65;" text="Soiree" textFill="WHITE" />
-                  <JFXButton fx:id="randone" layoutY="114.0" onAction="#ListRandone" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #117a65;" text="Randonee" textFill="WHITE" />
-                  <JFXButton fx:id="foire" layoutY="165.0" onAction="#ListFoire" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #117a65;" text="Foire" textFill="WHITE" />
-                  <JFXButton fx:id="voyage" layoutY="215.0" onAction="#ListVoyage" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #117a65;" text="Voyage" textFill="WHITE" />
-                  <JFXButton fx:id="theatre" layoutY="270.0" onAction="#ListTheatre" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #117a65;" text="Théatre" textFill="WHITE" />
-                  <JFXTextField fx:id="lieux" layoutX="-1.0" layoutY="436.0" prefHeight="25.0" prefWidth="187.0" promptText="Lieux" />
-                  <JFXButton fx:id="rech" layoutX="-1.0" layoutY="502.0" onAction="#Rech" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: #117a65;" text="Rechercher" textFill="WHITE" />
-                  <JFXSlider fx:id="pr" layoutX="2.0" layoutY="366.0" max="500.0" min="1.0" minorTickCount="1" prefHeight="45.0" prefWidth="181.0" showTickLabels="true" showTickMarks="true" />
+                  <JFXTextField fx:id="lieux" layoutX="5.0" layoutY="184.0" prefHeight="25.0" prefWidth="187.0" promptText="Lieux" />
+                  <JFXButton fx:id="rech" layoutX="8.0" layoutY="275.0" onAction="#Rech" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: black;" text="Rechercher" textFill="#841932" />
+                  <JFXSlider fx:id="pr" layoutX="3.0" layoutY="81.0" max="500.0" min="1.0" minorTickCount="1" prefHeight="45.0" prefWidth="181.0" showTickLabels="true" showTickMarks="true" />
                   <Separator layoutX="3.0" layoutY="327.0" prefHeight="8.0" prefWidth="181.0" />
                   <JFXDialog layoutX="49.0" layoutY="335.0" prefHeight="8.0" prefWidth="27.0" />
-                  <Label layoutX="75.0" layoutY="343.0" prefHeight="17.0" prefWidth="44.0" text="Prix:" />
+                  <Label layoutX="71.0" layoutY="27.0" prefHeight="17.0" prefWidth="44.0" text="Prix:" />
+                  <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="111.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
+            <JFXButton fx:id="re" layoutX="18.0" layoutY="21.0" onAction="#retour" text="Retour" textFill="WHITE" />
+            <JFXButton fx:id="event" layoutX="149.0" layoutY="8.0" onAction="#ListEvent" prefHeight="61.0" prefWidth="238.0" text="Evenements" textFill="#841932" />
+            <JFXButton fx:id="soire" layoutX="405.0" layoutY="7.0" onAction="#ListSoire" prefHeight="61.0" prefWidth="166.0" text="Soire" textFill="#841932" />
+            <JFXButton fx:id="randone" layoutX="756.0" layoutY="12.0" onAction="#ListRandone" prefHeight="61.0" prefWidth="166.0" text="Randone" textFill="#841932" />
+            <JFXButton fx:id="theatre" layoutX="922.0" layoutY="8.0" onAction="#ListTheatre" prefHeight="61.0" prefWidth="214.0" text="Théatre" textFill="#841932" />
+            <JFXButton fx:id="foire" layoutX="1137.0" layoutY="7.0" onAction="#ListFoire" prefHeight="61.0" prefWidth="187.0" text="Foire" textFill="#841932" />
+            <JFXButton fx:id="voyage" layoutX="573.0" layoutY="15.0" onAction="#ListVoyage" prefHeight="54.0" prefWidth="181.0" text="Voyage" textFill="#841932" />
+            <Separator layoutX="390.0" layoutY="8.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="0.0" />
+            <Separator layoutX="575.0" layoutY="8.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="0.0" />
+            <Separator layoutX="919.0" layoutY="8.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="0.0" />
+            <Separator layoutX="1140.0" layoutY="8.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="0.0" />
+            <Separator layoutX="752.0" layoutY="10.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="0.0" />
+            <Separator layoutX="197.0" layoutY="13.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="0.0" />
          </children>
       </AnchorPane>
    </children>

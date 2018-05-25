@@ -93,6 +93,8 @@ public class EventListController implements Initializable {
     private JFXSlider pr;
     @FXML
     private JFXButton rech;
+    @FXML
+    private JFXButton re;
     
     
     /**
@@ -299,6 +301,17 @@ public class EventListController implements Initializable {
          city.setCellValueFactory(new PropertyValueFactory<>("city"));
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
          date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+            Parent parentInscit = FXMLLoader.load(getClass().getResource("Acceuil.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
         
     }
 

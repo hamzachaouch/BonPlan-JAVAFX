@@ -55,11 +55,10 @@ public class FXMLEditProfCliController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         user.setText(StaticValues.client.getUsername());
-        nom.setText(StaticValues.client.getPrenom());
+    
         mail.setText(StaticValues.client.getEmail());
         pass.setText(StaticValues.client.getPassword());
-        String tell = Integer.toString(StaticValues.client.getTelphone());
-        tel.setText(tell);
+      
         // TODO
     }    
 
@@ -91,16 +90,11 @@ public class FXMLEditProfCliController implements Initializable {
         int t =Integer.parseInt(tel.getText());
         
         StaticValues.client.setUsername(n);
-        StaticValues.client.setPrenom(nn);
+      
         StaticValues.client.setEmail(m);
         StaticValues.client.setPassword(p);
-        StaticValues.client.setTelphone(t);
-        if(but.isPressed()){
-        StaticValues.client.getPhotoprofilpath();
-        }else{
-          StaticValues.client.setPhotoprofilpath(ff);
-        }
-        
+      
+   
         us.updateUserClient(StaticValues.client); 
         
         Client c = (Client) us.Authentification(n,p);

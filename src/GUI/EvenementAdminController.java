@@ -80,7 +80,7 @@ public class EvenementAdminController implements Initializable {
       ObservableList observableList = FXCollections.observableArrayList(arrayList);
         tabp.setItems(observableList);
 
-       image.setCellValueFactory(c -> new SimpleObjectProperty<ImageView>(new ImageView(new Image("http://localhost/bpPIDEV/web/images/"+c.getValue().getNom_image(),200,200,true,true))));
+       image.setCellValueFactory(c -> new SimpleObjectProperty<ImageView>(new ImageView(new Image("http://localhost/bpPI/web/images/"+c.getValue().getNom_image(),200,200,true,true))));
 // image.setCellValueFactory(new PropertyValueFactory<>("images"));
         title.setCellValueFactory(new PropertyValueFactory<>("title"));
          description.setCellValueFactory(new PropertyValueFactory<>("description"));

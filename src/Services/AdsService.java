@@ -19,7 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import utils.DataSource;
 import interfaces.IAds;
-import GUI.AuthController;
+//import GUI.AuthController;
 import utils.StaticVariables;
 
 /**
@@ -65,7 +65,7 @@ public class AdsService implements IAds<Ads> {
 
     @Override
     public ArrayList<Ads> selectAll() {
-        String req = "SELECT * FROM ads where status = 1";
+        String req = "SELECT * FROM ads";
         ArrayList<Ads> ads = new ArrayList<>();
         Ads ad = null;
         try {

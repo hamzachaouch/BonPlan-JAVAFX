@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,12 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListDealsController">
    <children>
-      <AnchorPane id="AnchorPane" layoutX="-113.0" layoutY="-91.0" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane id="AnchorPane" layoutX="-113.0" layoutY="-92.0" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <TableView fx:id="tabp" layoutX="119.0" layoutY="96.0" prefHeight="460.0" prefWidth="1200.0">
+            <TableView fx:id="tabp" layoutX="113.0" layoutY="160.0" prefHeight="370.0" prefWidth="1206.0">
                <columns>
                   <TableColumn fx:id="image" editable="false" minWidth="8.0" prefWidth="142.00003051757812" text="Images" />
                   <TableColumn fx:id="name" editable="false" minWidth="6.0" prefWidth="209.99996948242188" text="titre" />
@@ -25,18 +27,19 @@
                </columns>
             </TableView>
             <Label layoutX="7.0" layoutY="12.0" prefHeight="61.0" prefWidth="604.0" />
-            <Rectangle fx:id="pane" arcHeight="5.0" arcWidth="5.0" fill="#117a65" height="49.0" layoutX="10.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1200.0" />
-            <Label layoutX="17.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="1224.0" text="Mes Deals" textFill="WHITE">
+            <Button fx:id="Ajouter" layoutX="231.0" layoutY="574.0" mnemonicParsing="false" onAction="#Ajouter" prefWidth="162.0" style="-fx-background-color: black;" text="Ajouter" textFill="WHITE" />
+            <Button fx:id="Modifier" layoutX="548.0" layoutY="574.0" mnemonicParsing="false" onAction="#Modifier" prefWidth="139.0" style="-fx-background-color: black;" text="Modifier" textFill="WHITE" />
+            <Button fx:id="Supprimer" layoutX="833.0" layoutY="574.0" mnemonicParsing="false" onAction="#supprimer" prefWidth="139.0" style="-fx-background-color: black;" text="Supprimer" textFill="WHITE" />
+            <Button fx:id="recherche" layoutX="1118.0" layoutY="573.0" mnemonicParsing="false" onAction="#recherche" prefWidth="139.0" style="-fx-background-color: black;" text="Recherche" textFill="WHITE" />
+            <TextField layoutX="664.0" layoutY="543.0" fx:id="x" />
+            <Label layoutX="541.0" layoutY="549.0" text="Rechercher avec prix" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="113.0" layoutY="91.0" stroke="BLACK" strokeType="INSIDE" width="1206.0" />
+            <Text fill="WHITE" layoutX="627.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Offres" wrappingWidth="186.13671875">
                <font>
-                  <Font name="Berlin Sans FB" size="25.0" />
+                  <Font size="24.0" />
                </font>
-            </Label>
-            <Button fx:id="Ajouter" layoutX="153.0" layoutY="600.0" mnemonicParsing="false" onAction="#Ajouter" prefWidth="162.0" text="Ajouter" />
-            <Button fx:id="Modifier" layoutX="337.0" layoutY="600.0" mnemonicParsing="false" onAction="#Modifier" prefWidth="139.0" text="Modifier" />
-            <Button fx:id="Supprimer" layoutX="511.0" layoutY="599.0" mnemonicParsing="false" onAction="#supprimer" prefWidth="139.0" text="Supprimer" />
-            <Button fx:id="recherche" layoutX="669.0" layoutY="599.0" mnemonicParsing="false" onAction="#recherche" prefWidth="139.0" text="Recherche" />
-            <TextField layoutX="664.0" layoutY="564.0" fx:id="x" />
-            <Label layoutX="541.0" layoutY="568.0" text="Rechercher avec prix" />
+            </Text>
+            <JFXButton layoutX="128.0" layoutY="118.0" onAction="#retour" text="retour" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

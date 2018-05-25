@@ -2,15 +2,16 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="676.0" prefWidth="1416.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PropositionAdminController">
    <children>
-      <TableView fx:id="tab" layoutY="102.0" prefHeight="462.0" prefWidth="945.0">
+      <TableView fx:id="tab" layoutY="102.0" prefHeight="462.0" prefWidth="1416.0">
          <columns>
             <TableColumn fx:id="nom" prefWidth="137.0" text="Nom Proposition" />
             <TableColumn fx:id="cat" prefWidth="120.0" text="Categorie" />
@@ -20,18 +21,15 @@
             <TableColumn fx:id="des" prefWidth="433.0" text="Description" />
          </columns>
       </TableView>
-      <Label layoutX="23.0" layoutY="48.0" text="Liste de tous les propositions">
+      <Button layoutX="283.0" layoutY="609.0" mnemonicParsing="false" onAction="#satastique" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: black;" text="statistique" textFill="WHITE" />
+      <Button layoutX="634.0" layoutY="606.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: black;" text="Supprimer" textFill="WHITE" />
+      <Button layoutX="951.0" layoutY="606.0" mnemonicParsing="false" onAction="#addPropCompAction" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: black;" text="Ajouter" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="52.0" layoutX="-1.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="1416.0" />
+      <Text fill="WHITE" layoutX="449.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Propositions">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font size="24.0" />
          </font>
-      </Label>
-      <JFXButton layoutY="1.0" onAction="#profilAction" text="&lt; Profil">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </JFXButton>
-      <Button layoutX="387.0" layoutY="606.0" mnemonicParsing="false" onAction="#satastique" text="Savoir Lesstetistique" />
-      <Button layoutX="634.0" layoutY="606.0" mnemonicParsing="false" onAction="#deleteAction" text="Supprimer" />
-      <Button layoutX="872.0" layoutY="606.0" mnemonicParsing="false" onAction="#addPropCompAction" text="Ajouter Comme Entreprise" />
+      </Text>
+      <JFXButton layoutX="24.0" layoutY="19.0" onAction="#retour" text="retour" textFill="WHITE" />
    </children>
 </AnchorPane>

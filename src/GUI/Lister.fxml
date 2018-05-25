@@ -20,14 +20,6 @@
             <TableColumn fx:id="vue" prefWidth="116.0" text="Nombre de vue" />
         </columns>
       </TableView>
-      <Button fx:id="inscrire" layoutX="550.0" layoutY="263.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #d12358;" text="S'inscrire">
-         <font>
-            <Font size="13.0" />
-         </font></Button>
-      <Button fx:id="login" layoutX="550.0" layoutY="166.0" mnemonicParsing="false" onAction="#logAction" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #d12358;" text="Login" textFill="#251f21" textOverrun="CLIP">
-         <font>
-            <Font size="13.0" />
-         </font></Button>
       <ImageView fx:id="imgPub" fitHeight="100.0" fitWidth="300.0" layoutX="253.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Image/publicit.png" />

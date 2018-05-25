@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Gui;
+package GUI;
 
 import entite.Ads;
 import java.io.File;
@@ -118,9 +118,7 @@ public class UpdateAdsController implements Initializable {
                java.sql.Date dd = java.sql.Date.valueOf(debutDate.getValue());
        java.sql.Date df = java.sql.Date.valueOf(finDate.getValue());
         Ads a = new Ads(dd, df, titreField.getText(), path, descField.getText(), villeField.getText());
-        
         service.update(a);
-        
         if (service.update(a) == true){
              ((Node) event.getSource()).getScene().getWindow().hide(); 
             Parent pa = FXMLLoader.load(getClass().getResource("/gui/puliciteAfterLogin.fxml"));

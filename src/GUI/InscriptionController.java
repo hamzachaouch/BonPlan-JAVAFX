@@ -87,7 +87,7 @@ public class InscriptionController implements Initializable {
 
     @FXML
     private void Auth(ActionEvent event) throws IOException {
-        Parent parentInscit = FXMLLoader.load(getClass().getResource("Auth.fxml"));
+        Parent parentInscit = FXMLLoader.load(getClass().getResource("Intermidiére.fxml"));
         
         Scene sceneInscit = new Scene(parentInscit);
         Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -102,21 +102,20 @@ public class InscriptionController implements Initializable {
     private void ajouter(ActionEvent event) throws IOException {
         UserService us = new UserService();
         String n = name.getText();
-        String p = pre.getText();
+        String p = pass.getText();
         String m = mail.getText();
         int ci = Integer.parseInt(cin.getText());
         int t =Integer.parseInt(tel.getText());
         String pas = pass.getText();
         
         Client client = 
-         new Client(n, ci, p, n, m, m, 1, null, pas,null, null,"",
-                t,f);
+         new Client(n,m,p);
         us.adduser(client);
          StaticValues.client=client;
          client =  us.FindClientById(n);
              
         
-               Parent parentInscit = FXMLLoader.load(getClass().getResource("Compt.fxml"));
+               Parent parentInscit = FXMLLoader.load(getClass().getResource("Acceuil.fxml"));
         
         Scene sceneInscit = new Scene(parentInscit);
         Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();

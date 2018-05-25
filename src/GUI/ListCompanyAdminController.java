@@ -148,4 +148,14 @@ public class ListCompanyAdminController implements Initializable {
             stageInscit .setScene(sceneInscit );
             stageInscit .show();
     }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+         Parent parentInscit = FXMLLoader.load(getClass().getResource("AdministrateurC.fxml"));
+            Scene sceneInscit = new Scene(parentInscit);
+            Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stageInscit .setScene(sceneInscit );
+            stageInscit .show();
+        
+    }
 }

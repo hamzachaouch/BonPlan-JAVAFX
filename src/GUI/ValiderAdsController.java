@@ -70,14 +70,14 @@ public class ValiderAdsController implements Initializable {
 
     @FXML
     private void logout(ActionEvent event) throws IOException {
-                AuthController.connected = null;
-        ((Node) event.getSource()).getScene().getWindow().hide();
-                    Parent pa = FXMLLoader.load(getClass().getResource("/gui/Authentification.fxml"));
-                    Stage stage = new Stage();
-                    Scene sce = new Scene(pa);
-                    stage.setScene(sce);
-                    stage.setTitle("à plutôt tard");
-                    stage.show();
+//                AuthentificationController.connected = null;
+//        ((Node) event.getSource()).getScene().getWindow().hide();
+//                    Parent pa = FXMLLoader.load(getClass().getResource("/gui/Authentification.fxml"));
+//                    Stage stage = new Stage();
+//                    Scene sce = new Scene(pa);
+//                    stage.setScene(sce);
+//                    stage.setTitle("à plutôt tard");
+//                    stage.show();
     }
 
     @FXML

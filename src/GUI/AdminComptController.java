@@ -51,16 +51,7 @@ public class AdminComptController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-          if(StaticValues.admin.getPhotoprofilpath()!=null){
-          BufferedImage bf = null;
-        try {
-            bf = ImageIO.read(StaticValues.admin.getPhotoprofilpath());
-        } catch (IOException ex) {
-            Logger.getLogger(ComptController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-          Image im = SwingFXUtils.toFXImage(bf, null);
-        ima.setImage(im);
-        }
+       
     }    
 
     @FXML

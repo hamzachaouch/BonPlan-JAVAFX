@@ -7,6 +7,7 @@ package GUI;
 
 import static GUI.ListDealsClientController.modifClient;
 import Services.CompanyServices;
+import com.jfoenix.controls.JFXButton;
 import entite.Company;
 import entite.Deals;
 import entite.Review;
@@ -63,6 +64,8 @@ public class ListCompanyClientController implements Initializable {
     private Button avisSelect;
     @FXML
     private Button avisSelect1;
+    @FXML
+    private JFXButton re;
 
 
     /**
@@ -222,6 +225,16 @@ public class ListCompanyClientController implements Initializable {
             stageInscit .show();
     
     
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+            Parent parentInscit = FXMLLoader.load(getClass().getResource("Acceuil.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
     }
     
 }

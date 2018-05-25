@@ -2,6 +2,24 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/DetailsEvenementController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/ListDealsClientController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/MesEvenementsController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/Acceuil.fxml</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AjoutAvisController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/DetailEventsController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/EventListController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AuthController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/pitest2018/test.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AdministrateurCController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/PageAvisController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AcceuilController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AdminController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/ListCompanyClientController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/ComptController.java</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AdministrateurC.fxml</file>
+            <file>file:/C:/Users/ThinkPad/Documents/NetBeansProjects/BonPlan-JAVAFX/src/GUI/AdminComptController.java</file>
+        </group>
     </open-files>
 </project-private>

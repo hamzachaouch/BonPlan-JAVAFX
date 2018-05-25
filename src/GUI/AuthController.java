@@ -7,6 +7,7 @@ package GUI;
 
 import Services.CompanyServices;
 import Services.UserService;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import entite.Admin;
@@ -23,6 +24,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import utils.StaticValues;
@@ -41,6 +44,24 @@ public class AuthController implements Initializable {
     private JFXTextField log;
     @FXML
     private JFXPasswordField pas;
+    @FXML
+    private AnchorPane bigAnchor;
+    @FXML
+    private AnchorPane ancho1;
+    @FXML
+    private Label SignIn;
+    @FXML
+    private JFXButton forgotPass;
+    @FXML
+    private AnchorPane anchro2;
+    @FXML
+    private Label keep;
+    @FXML
+    private JFXButton sgUp;
+    @FXML
+    private JFXButton admin;
+    @FXML
+    private Label output;
 
     /**
      * Initializes the controller class.
@@ -50,7 +71,6 @@ public class AuthController implements Initializable {
         // TODO
     }    
 
-    @FXML
     private void sinscrireAction(ActionEvent event) throws IOException {
          Parent parentInscit = FXMLLoader.load(getClass().getResource("Intermidiére.fxml"));
         Scene sceneInscit = new Scene(parentInscit);
@@ -64,29 +84,32 @@ public class AuthController implements Initializable {
     private void conect(ActionEvent event) throws IOException {
         String l = log.getText();
         String p = pas.getText();
+   
         UserService us = new UserService();
         User check = us.Authentification(l,p);
         StaticValues.user=check;
-        
+        System.out.println(check);
+          System.out.println(l+p);
         if(check!=null){
-          if( check.getRole().equals("a:1:{i:0;s:11:\"ROLE_ADMIN\";}")){
+         
+            if( check.getRole().equals("a:0:{}")){
               Client c = (Client) us.Authentification(l,p);
               StaticValues.client=c;
-               Parent parentInscit = FXMLLoader.load(getClass().getResource("Compt.fxml"));
+               Parent parentInscit = FXMLLoader.load(getClass().getResource("Acceuil.fxml"));
         
-        Scene sceneInscit = new Scene(parentInscit);
-        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+                 Scene sceneInscit = new Scene(parentInscit);
+              Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
        
-        stageInscit .hide();
+             stageInscit .hide();
         
-        stageInscit .setScene(sceneInscit );
-        stageInscit .show();
+             stageInscit .setScene(sceneInscit );
+             stageInscit .show();
         
           }
-        else{
+            else {
               Admin a = (Admin) us.Authentification(l,p);
               StaticValues.admin=a;
-              Parent parentInscit = FXMLLoader.load(getClass().getResource("AdminCompt.fxml"));
+              Parent parentInscit = FXMLLoader.load(getClass().getResource("AdministrateurC.fxml"));
         
         Scene sceneInscit = new Scene(parentInscit);
         Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -96,12 +119,12 @@ public class AuthController implements Initializable {
         stageInscit .setScene(sceneInscit );
         stageInscit .show();
                 }
-        }
-        else{
-                    CompanyServices cs = new CompanyServices();
-                    StaticVariables.company =cs.selectBylogin(l);
-                   
-       Parent parentInscit = FXMLLoader.load(getClass().getResource("CompteEntreprise.fxml"));
+        } /*
+       else{
+           Company company = us.auth(l, p);
+           if(company!=null){
+                StaticValues.company=company;
+             Parent parentInscit = FXMLLoader.load(getClass().getResource("etablissement.fxml"));
         
         Scene sceneInscit = new Scene(parentInscit);
         Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -110,7 +133,41 @@ public class AuthController implements Initializable {
         
         stageInscit .setScene(sceneInscit );
         stageInscit .show();
-        }
+           } */
+           else{
+              JOptionPane d = new JOptionPane();
+              d.showMessageDialog( null, "Bienvenue", 
+               "le titre", JOptionPane.ERROR_MESSAGE);
+           } 
+         
+   
+    
     }
+
+    @FXML
+    private void onclickedRecupererPass(ActionEvent event) {
+        
+    }
+
+    @FXML
+    private void sincrireAction(ActionEvent event) throws IOException {
+         Parent parentInscit = FXMLLoader.load(getClass().getResource("Intermidiére.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+    }
+
+    @FXML
+    private void onclickedEspaceAdmin(ActionEvent event) throws IOException {
+                 Parent parentInscit = FXMLLoader.load(getClass().getResource("AdministrateurC.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+    }
+    
     
 }

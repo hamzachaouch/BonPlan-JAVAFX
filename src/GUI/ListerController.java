@@ -41,11 +41,7 @@ public class ListerController implements Initializable {
     @FXML
     private ImageView imgPub;
     
-    @FXML
-    private Button login;
-        
-    @FXML
-    private Button inscrire;
+   
     @FXML
     private TableView<Ads> listPub;
     @FXML
@@ -84,17 +80,7 @@ public class ListerController implements Initializable {
        
     }    
 
-    @FXML
-    private void logAction(ActionEvent event) throws IOException {
-          
-        ((Node) event.getSource()).getScene().getWindow().hide();
-         Parent pa = FXMLLoader.load(getClass().getResource("/gui/Authentification.fxml"));
-         Stage stage = new Stage();
-         Scene sce = new Scene(pa);
-         stage.setScene(sce);
-         stage.setTitle("Login");
-         stage.show();
-    }
+
 
     @FXML
     private void DetailAction(ActionEvent event) throws IOException {

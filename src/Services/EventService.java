@@ -78,7 +78,7 @@ public class EventService implements iEvent{
     public List<Event> selectAll() {
          List<Event> events = new ArrayList<Event>();
 
-        String req = "SELECT * FROM `event`ORDER BY date DESC ";
+        String req = "SELECT * FROM `event`ORDER BY date ASC ";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(req);

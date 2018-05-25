@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="674.0" style="-fx-background-color: #938686;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s1.DetailAdsController">
+   <children>
+      <Label fx:id="titreAds" layoutX="144.0" layoutY="14.0" prefHeight="53.0" prefWidth="312.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="67.0" prefHeight="27.0" prefWidth="114.0" text="Titre : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="debutAds" layoutX="37.0" layoutY="141.0" prefHeight="27.0" prefWidth="114.0" text="Date début : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="finAds" layoutX="37.0" layoutY="187.0" prefHeight="17.0" prefWidth="114.0" text="Date fin : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="237.0" prefHeight="27.0" prefWidth="114.0" text="Description : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="101.0" prefHeight="27.0" prefWidth="114.0" text="Ville : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="inputTitre" layoutX="151.0" layoutY="72.0" prefHeight="21.0" prefWidth="172.0" style="-fx-background-color: #e0d6d6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="InputVille" layoutX="151.0" layoutY="106.0" prefHeight="21.0" prefWidth="172.0" style="-fx-background-color: #e0d6d6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="inputDateDebut" layoutX="151.0" layoutY="146.0" prefHeight="21.0" prefWidth="172.0" style="-fx-background-color: #e0d6d6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="InputDateFin" layoutX="151.0" layoutY="192.0" prefHeight="21.0" prefWidth="172.0" style="-fx-background-color: #e0d6d6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="inputDescription" alignment="TOP_LEFT" layoutX="151.0" layoutY="237.0" prefHeight="111.0" prefWidth="215.0" style="-fx-background-color: #e0d6d6;" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="image" fitHeight="135.0" fitWidth="145.0" layoutX="37.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="43.0" fitWidth="49.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#Retour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="listAvis" layoutX="377.0" layoutY="75.0" prefHeight="307.0" prefWidth="280.0" style="-fx-background-color: #e0d6d6;" />
+      <TextArea fx:id="avisField" layoutX="377.0" layoutY="386.0" prefHeight="72.0" prefWidth="200.0" style="-fx-background-color: #e4a4ba;" />
+      <Button layoutX="583.0" layoutY="404.0" mnemonicParsing="false" onAction="#ajoutAvisAction" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #d12358;" text="Ajout avis" textFill="#e0d6d6" />
+      <Label layoutX="386.0" layoutY="44.0" prefHeight="27.0" prefWidth="263.0" text="Témoignage de cette publicité">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

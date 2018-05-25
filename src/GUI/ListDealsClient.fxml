@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXSlider?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="1100.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListDealsClientController">
    <children>
@@ -15,7 +17,7 @@
          <children>
             <AnchorPane id="AnchorPane" fx:id="s" layoutY="10.0" prefHeight="808.0" prefWidth="1680.0">
                <children>
-                  <TableView fx:id="tabp" layoutX="223.0" layoutY="57.0" onMouseClicked="#showDetailDeal" prefHeight="749.0" prefWidth="1444.0">
+                  <TableView fx:id="tabp" layoutX="223.0" layoutY="57.0" onMouseClicked="#showDetailDeal" prefHeight="749.0" prefWidth="1444.0" style="-: ;">
                      <columns>
                         <TableColumn fx:id="image" editable="false" minWidth="8.0" prefWidth="167.0" text="Images" />
                         <TableColumn fx:id="name" editable="false" minWidth="6.0" prefWidth="112.0" text="titre" />
@@ -27,15 +29,16 @@
                      </columns>
                   </TableView>
                   <Label layoutX="7.0" layoutY="12.0" prefHeight="61.0" prefWidth="604.0" />
-                  <Rectangle fx:id="pane" arcHeight="5.0" arcWidth="5.0" fill="#117a65" height="49.0" layoutX="10.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1660.0" />
-                  <Label layoutX="-1.0" layoutY="-24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="1224.0" text="Mes Deals" textFill="WHITE">
-                     <font>
-                        <Font name="Berlin Sans FB" size="25.0" />
-                     </font>
-                  </Label>
+                  <Rectangle fx:id="pane" arcHeight="5.0" arcWidth="5.0" height="49.0" layoutX="10.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1660.0" />
                   <Label layoutX="79.0" layoutY="82.0" text="prix" />
                   <JFXSlider fx:id="slider" layoutX="18.0" layoutY="109.0" max="5000.0" onMouseReleased="#recherche" prefHeight="14.0" prefWidth="192.0" />
-                  <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#recherche" prefHeight="25.0" prefWidth="215.0" text="Rechercher" />
+                  <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#recherche" prefHeight="25.0" prefWidth="215.0" style="-fx-background-color: black;" text="Rechercher" textFill="#841932" />
+                  <JFXButton fx:id="re" layoutX="14.0" layoutY="20.0" onAction="#retour" text="Retour" textFill="WHITE" />
+                  <Text fill="#841932" layoutX="485.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Découvrire nos Offres" wrappingWidth="476.13671875">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>

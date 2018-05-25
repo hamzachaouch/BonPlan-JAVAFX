@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListCompanyAdminController">
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListCompanyAdminController">
    <children>
-      <TableView fx:id="listCompany" layoutX="11.0" layoutY="114.0" prefHeight="430.0" prefWidth="1279.0">
+      <TableView fx:id="listCompany" layoutX="5.0" layoutY="72.0" prefHeight="505.0" prefWidth="1290.0">
          <columns>
             <TableColumn id="ville_entreprise" fx:id="image" prefWidth="228.99996948242188" text="Image" />
             <TableColumn fx:id="nom" prefWidth="113.0" text="Nom" />
@@ -21,9 +24,15 @@
             <TableColumn fx:id="etat" prefWidth="79.0" text="Etat" />
          </columns>
       </TableView>
-      <Button fx:id="ajouterCompany" layoutX="123.0" layoutY="644.0" mnemonicParsing="false" onAction="#ajouterCompany" prefHeight="25.0" prefWidth="130.0" text="Ajouter" />
-      <Button fx:id="supprimer" layoutX="1088.0" layoutY="654.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="130.0" text="Supprimer" />
-      <Button fx:id="debloquer" layoutX="570.0" layoutY="639.0" mnemonicParsing="false" onAction="#debloquer" prefHeight="25.0" prefWidth="130.0" text="Débloquer" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#117a65" height="115.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1300.0" />
+      <Button fx:id="ajouterCompany" layoutX="117.0" layoutY="618.0" mnemonicParsing="false" onAction="#ajouterCompany" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: black;" text="Ajouter" textFill="WHITE" />
+      <Button fx:id="supprimer" layoutX="1069.0" layoutY="623.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: black;" text="Supprimer" textFill="WHITE" />
+      <Button fx:id="debloquer" layoutX="619.0" layoutY="620.0" mnemonicParsing="false" onAction="#debloquer" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: black;" text="Débloquer" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="73.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1300.0" />
+      <Text fill="WHITE" layoutX="418.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste Entreprises" wrappingWidth="331.2421875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="11.0" layoutY="23.0" onAction="#retour" text="retour" textFill="WHITE" />
    </children>
 </AnchorPane>

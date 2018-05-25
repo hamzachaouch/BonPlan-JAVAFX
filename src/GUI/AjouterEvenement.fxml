@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.PrefixSelectionChoiceBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterEvenementController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1700.0" style="-fx-background-color: gris;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterEvenementController">
    <children>
       <AnchorPane id="AnchorPane" layoutX="1.0" layoutY="128.0" prefHeight="482.0" prefWidth="1015.0">
          <children>
@@ -57,18 +58,19 @@
                   <PrefixSelectionChoiceBox fx:id="typeBox" prefHeight="25.0" prefWidth="410.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
-            <Button fx:id="Btn_Clear_Event" layoutX="402.0" layoutY="501.0" onAction="#AnnulerEvent_onClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 5; -fx-background-color: #117a65;" text="Annuler" textFill="WHITE" />
-            <Button layoutX="237.0" layoutY="501.0" onAction="#Ajouter" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 5; -fx-background-color: #117a65;" text="Ajouter" textFill="WHITE" />
+            <Button fx:id="Btn_Clear_Event" layoutX="402.0" layoutY="501.0" onAction="#AnnulerEvent_onClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 5; -fx-background-color: black;" text="Annuler" textFill="#841932" />
+            <Button layoutX="237.0" layoutY="501.0" onAction="#Ajouter" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 5; -fx-background-color: black;" text="Ajouter" textFill="#841932" />
             <Label fx:id="loc1a" layoutX="653.0" layoutY="32.0" />
             <Label fx:id="loc1l" layoutX="653.0" layoutY="62.0" />
             <GoogleMapView fx:id="mapView" layoutX="614.0" prefHeight="516.0" prefWidth="1076.0" />
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#117a65" height="117.0" stroke="BLACK" strokeType="INSIDE" width="1700.0" />
-      <Label layoutX="453.0" layoutY="30.0" prefHeight="17.0" prefWidth="506.0" text="Ajouter Evenement" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="82.0" stroke="BLACK" strokeType="INSIDE" width="1700.0" />
+      <Label layoutX="415.0" layoutY="11.0" prefHeight="46.0" prefWidth="544.0" text="Ajouter Evenement" textFill="#841932">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
+      <JFXButton layoutX="26.0" layoutY="29.0" onAction="#retour" text="retour" textFill="WHITE" />
    </children>
 </AnchorPane>

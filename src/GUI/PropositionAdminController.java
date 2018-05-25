@@ -67,7 +67,6 @@ public class PropositionAdminController implements Initializable {
         des.setCellValueFactory(new PropertyValueFactory<>("description"));
     }    
 
-    @FXML
     private void profilAction(ActionEvent event) {
         int id = tab.getSelectionModel().getSelectedItem().getId();
            System.out.println("Voter id = "+id);
@@ -120,6 +119,20 @@ public class PropositionAdminController implements Initializable {
 
     @FXML
     private void addPropCompAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+          Parent parentInscit = FXMLLoader.load(getClass().getResource("AdministrateurC.fxml"));
+        
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+       
+        stageInscit .hide();
+        
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+        
     }
     
 }

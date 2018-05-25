@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.lynden.gmapsfx.GoogleMapView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DetailEventsController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: Gris;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DetailEventsController">
    <children>
-      <TextField fx:id="fromTextField" layoutX="8.0" layoutY="254.0" onAction="#toTextFieldAction" promptText="From:" />
-      <TextField fx:id="toTextField" layoutX="8.0" layoutY="298.0" promptText="To:" />
-      <GoogleMapView fx:id="mapView" layoutX="8.0" layoutY="323.0" prefHeight="386.0" prefWidth="982.0" />
+      <TextField fx:id="fromTextField" layoutX="471.0" layoutY="52.0" onAction="#toTextFieldAction" promptText="Entrez votre Emplacement:" />
+      <TextField fx:id="toTextField" layoutX="781.0" layoutY="50.0" promptText="To:" />
+      <GoogleMapView fx:id="mapView" layoutX="416.0" layoutY="101.0" prefHeight="600.0" prefWidth="611.0" />
       <ImageView fitHeight="229.0" fitWidth="214.0" layoutX="-36.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="350.0" layoutY="39.0" text="Titre" />
-      <Label layoutX="350.0" layoutY="78.0" text="Description" />
-      <Label layoutX="350.0" layoutY="201.0" text="Tel : " />
-      <ImageView fx:id="image" fitHeight="197.0" fitWidth="265.0" layoutY="-4.0" />
-      <Label fx:id="title" layoutX="432.0" layoutY="39.0" prefHeight="17.0" prefWidth="181.0" />
-      <Label fx:id="description" layoutX="453.0" layoutY="59.0" prefHeight="142.0" prefWidth="537.0" />
-      <Label fx:id="tel" layoutX="419.0" layoutY="193.0" prefHeight="17.0" prefWidth="132.0" />
-      <Label fx:id="price" layoutX="352.0" layoutY="246.0" text="prix" />
-      <Label fx:id="price" layoutX="419.0" layoutY="246.0" prefHeight="17.0" prefWidth="208.0" />
-      <Label layoutX="352.0" layoutY="290.0" text="Site" />
-      <Label fx:id="site" layoutX="419.0" layoutY="282.0" prefHeight="17.0" prefWidth="181.0" />
+      <Label layoutX="14.0" layoutY="233.0" prefHeight="17.0" prefWidth="42.0" text="Titre : " />
+      <Label layoutX="12.0" layoutY="414.0" text="Description :" />
+      <Label layoutX="14.0" layoutY="285.0" text="Tel : " />
+      <ImageView fx:id="image" fitHeight="164.0" fitWidth="382.0" layoutX="23.0" layoutY="50.0" />
+      <Label fx:id="title" layoutX="96.0" layoutY="234.0" prefHeight="17.0" prefWidth="181.0" textFill="WHITE" />
+      <Label fx:id="description" layoutX="7.0" layoutY="445.0" prefHeight="144.0" prefWidth="405.0" />
+      <Label fx:id="tel" layoutX="82.0" layoutY="288.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="price" layoutX="16.0" layoutY="330.0" prefHeight="17.0" prefWidth="35.0" text="prix :" />
+      <Label fx:id="price" layoutX="56.0" layoutY="330.0" prefHeight="17.0" prefWidth="208.0" />
+      <Label layoutX="16.0" layoutY="374.0" prefHeight="17.0" prefWidth="35.0" text="Site :" />
+      <Label fx:id="site" layoutX="83.0" layoutY="377.0" prefHeight="17.0" prefWidth="181.0" />
+      <Separator layoutX="411.0" layoutY="2.0" orientation="VERTICAL" prefHeight="701.0" prefWidth="2.0" />
+      <JFXButton layoutX="15.0" layoutY="5.0" onAction="#retour" text="Retour" />
    </children>
 </AnchorPane>

@@ -3,27 +3,38 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="GUI.AuthController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AuthController">
    <children>
-      <ImageView fitHeight="60.0" fitWidth="92.0" layoutX="101.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/users.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="60.0" fitWidth="84.0" layoutX="101.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/padlock.png" />
-         </image>
-      </ImageView>
-      <JFXTextField fx:id="log" layoutX="213.0" layoutY="136.0" prefHeight="25.0" prefWidth="298.0" promptText="Login" />
-      <JFXButton layoutX="511.0" layoutY="54.0" onAction="#sinscrireAction" text="S'inscrire" />
-      <Button layoutX="265.0" layoutY="299.0" mnemonicParsing="false" onAction="#conect" text="Connecter" />
-      <JFXPasswordField fx:id="pas" layoutX="213.0" layoutY="228.0" prefHeight="25.0" prefWidth="298.0" />
+      <AnchorPane id="AnchorPane" fx:id="bigAnchor" prefHeight="420.0" prefWidth="620.0" style="-fx-background-color: #3d010f;">
+         <children>
+            <AnchorPane fx:id="ancho1" layoutX="335.0" layoutY="30.0" prefHeight="329.0" prefWidth="246.0" style="-fx-background-color: #841932;">
+               <children>
+                  <Label fx:id="SignIn" layoutX="105.0" layoutY="22.0" prefHeight="26.0" prefWidth="54.0" text="Sign In" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="log" labelFloat="true" layoutX="41.0" layoutY="88.0" prefHeight="25.0" prefWidth="164.0" promptText="Pseudo" style="-fx-background-color: white;" unFocusColor="WHITE" />
+                  <JFXPasswordField fx:id="pas" labelFloat="true" layoutX="41.0" layoutY="147.0" prefHeight="25.0" prefWidth="164.0" promptText="Password" style="-fx-background-color: white;" unFocusColor="WHITE" />
+                  <JFXButton layoutX="41.0" layoutY="224.0" onAction="#conect" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #42f4d4;" text="Login" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchro2" layoutX="4.0" layoutY="40.0" prefHeight="297.0" prefWidth="322.0">
+               <children>
+                  <Label fx:id="keep" layoutX="33.0" layoutY="88.0" prefHeight="21.0" prefWidth="298.0" text="&lt;&lt;Votre Meilleur Guide de Sortie&gt;&gt;" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="sgUp" layoutX="80.0" layoutY="188.0" onAction="#sincrireAction" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #42f4d4;" text="S  inscrire" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="output" alignment="CENTER" layoutX="125.0" layoutY="366.0" opacity="0.0" prefHeight="17.0" prefWidth="322.0" style="-fx-background-color: white;" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

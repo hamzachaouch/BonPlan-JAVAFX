@@ -56,11 +56,11 @@ public class EditAdminController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         nom.setText(StaticValues.admin.getUsername());
-        nomm.setText(StaticValues.admin.getPrenom());
+   
         mail.setText(StaticValues.admin.getEmail());
         piss.setText(StaticValues.admin.getPassword());
-        String t = Integer.toString(StaticValues.admin.getTelphone());
-        tel.setText(t);
+      
+    
         // TODO
     }    
 
@@ -70,7 +70,7 @@ public class EditAdminController implements Initializable {
         String use = StaticValues.admin.getUsername();
          Admin c = us.FindAdmintById(use);
          StaticValues.admin=c;
-        Parent parentInscit = FXMLLoader.load(getClass().getResource("Admin.fxml"));
+        Parent parentInscit = FXMLLoader.load(getClass().getResource("AdministrateurC.fxml"));
         
         Scene sceneInscit = new Scene(parentInscit);
         Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -108,15 +108,11 @@ public class EditAdminController implements Initializable {
         int t =Integer.parseInt(tel.getText());
         
         StaticValues.admin.setUsername(n);
-        StaticValues.admin.setPrenom(nn);
+      
         StaticValues.admin.setEmail(m);
         StaticValues.admin.setPassword(p);
-        StaticValues.admin.setTelphone(t);
-        if(but.isPressed()){
-        StaticValues.admin.getPhotoprofilpath();
-        }else{
-          StaticValues.admin.setPhotoprofilpath(fff);
-        }
+      
+      
         
         us.updateUserAdmin(StaticValues.admin); 
         
@@ -138,11 +134,10 @@ public class EditAdminController implements Initializable {
     @FXML
     private void annulAction(ActionEvent event) {
          nom.setText(StaticValues.admin.getUsername());
-        nomm.setText(StaticValues.admin.getPrenom());
         mail.setText(StaticValues.admin.getEmail());
         piss.setText(StaticValues.admin.getPassword());
-        String t = Integer.toString(StaticValues.admin.getTelphone());
-        tel.setText(t);
+
+  
     }
     
 }

@@ -7,6 +7,7 @@ package GUI;
 
 import static GUI.ListDealsController.modif;
 import Services.DealsServices;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
 import entite.Deals;
 import java.io.IOException;
@@ -65,6 +66,8 @@ public class ListDealsClientController implements Initializable {
     private AnchorPane s;
     @FXML
     private JFXSlider slider;
+    @FXML
+    private JFXButton re;
 
     /**
      * Initializes the controller class.
@@ -137,4 +140,19 @@ public class ListDealsClientController implements Initializable {
         dateDeb.setCellValueFactory(new PropertyValueFactory<>("dateDebut"));
         dateFin.setCellValueFactory(new PropertyValueFactory<>("dateFin"));
     }
+
+    @FXML
+    private void recherche(MouseEvent event) {
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+              Parent parentInscit = FXMLLoader.load(getClass().getResource("Acceuil.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+    }
+    
 }

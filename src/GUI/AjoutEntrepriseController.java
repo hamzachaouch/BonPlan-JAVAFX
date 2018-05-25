@@ -143,7 +143,7 @@ ObservableList<String> typeList = FXCollections.observableArrayList("Restaurant"
             showMessageDialog(null, "Success");
             ((Node) event.getSource()).getScene().getWindow().hide(); 
             
-            Parent parent = FXMLLoader.load(getClass().getResource("/GUI/ListCompanyClient.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/GUI/etablissement.fxml"));
             Stage stage = new Stage();
             Scene sc = new Scene(parent);
             stage.setScene(sc);

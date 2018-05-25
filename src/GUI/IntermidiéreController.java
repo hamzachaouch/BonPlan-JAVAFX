@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
@@ -30,6 +31,8 @@ public class IntermidiéreController implements Initializable {
     private JFXRadioButton cli;
     @FXML
     private JFXRadioButton ent;
+    @FXML
+    private Label keep;
     /**
      * Initializes the controller class.
      */
@@ -52,6 +55,16 @@ public class IntermidiéreController implements Initializable {
     @FXML
     private void clickCompany(ActionEvent event) throws IOException {
         Parent parentInscit = FXMLLoader.load(getClass().getResource("AjoutEntreprise.fxml"));
+        Scene sceneInscit = new Scene(parentInscit);
+        Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stageInscit .hide();
+        stageInscit .setScene(sceneInscit );
+        stageInscit .show();
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+             Parent parentInscit = FXMLLoader.load(getClass().getResource("Auth.fxml"));
         Scene sceneInscit = new Scene(parentInscit);
         Stage stageInscit  = (Stage)((Node)event.getSource()).getScene().getWindow();
         stageInscit .hide();
